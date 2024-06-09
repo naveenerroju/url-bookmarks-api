@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "5c777630-c546-420a-852c-ee8c9e6252f5",
+		"name": "url-bookmarks-api",
+		"description": "```\nThe URL Bookmarks API is a Spring Boot application designed to manage and store URLs as bookmarks. The application uses MongoDB as the database to persist the bookmark data.\n\n ```",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21585631"
+	},
+	"item": [
+		{
+			"name": "new bookmark",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"google\",\r\n    \"url\": \"https://www.google.com/\",\r\n    \"caption\": \"my search engine\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/bookmarks/",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"bookmarks",
+						""
+					]
+				},
+				"description": "StartFragment\n\n### Adds a new bookmarks\n\n```\nEndFragment\n\n ```"
+			},
+			"response": []
+		},
+		{
+			"name": "new bookmark 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"github profile\",\r\n    \"url\": \"https://github.com/naveenerroju\",\r\n    \"caption\": \"my github profile\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/bookmarks/",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"bookmarks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get latest bookmarks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}/bookmarks/",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"bookmarks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get bookmark by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{path}}/bookmarks/1",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"bookmarks",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
